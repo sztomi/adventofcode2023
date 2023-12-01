@@ -3,7 +3,7 @@
 use common::{get_lines, Result};
 
 fn main() -> Result<()> {
-    let lines = get_lines("day1/input.txt")?;
+    let lines = get_lines("../inputs/day1.txt")?;
 
     let isnum = |c: &char| c.is_ascii_digit();
 
