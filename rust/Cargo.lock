@@ -18,6 +18,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "day2"
+version = "0.1.0"
+dependencies = [
+ "common",
+]
+
+[[package]]
 name = "either"
 version = "1.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"

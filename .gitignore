@@ -1,1 +1,4 @@
-/target
+/rust/target
+*.cmi
+*.cmo
+a.out
