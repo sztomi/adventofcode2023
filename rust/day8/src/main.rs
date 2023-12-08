@@ -2,19 +2,6 @@ use std::collections::HashMap;
 use common::{get_lines, Result};
 use itertools::Itertools;
 
-fn gcd(mut a: usize, mut b: usize) -> usize {
-    while b != 0 {
-        let t = b;
-        b = a % b;
-        a = t;
-    }
-    a
-}
-
-fn lcm(a: usize, b: usize) -> usize {
-    a / gcd(a, b) * b
-}
-
 fn main() -> Result<()> {
     let lines = get_lines("../inputs/day8.txt")?;
     let d: Vec<_> = lines[0]
@@ -57,7 +44,7 @@ fn main() -> Result<()> {
             }
             steps
         })
-        .fold(1, lcm);
+        .fold(1, num::integer::lcm);
     println!("Part 2: {}", part2);
 
     Ok(())
