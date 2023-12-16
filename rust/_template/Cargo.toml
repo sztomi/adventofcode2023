@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 common = { path = "../common" }
 itertools = "*"
+dbg-pls = { version = "*", features = ["colors", "pretty"] }
