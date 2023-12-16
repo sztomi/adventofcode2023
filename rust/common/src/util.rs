@@ -1,6 +1,7 @@
 use std::{hash::Hash, ops};
+use dbg_pls::DebugPls;
 
-#[derive(Debug, Clone, Copy, Eq, PartialEq, Hash)]
+#[derive(Debug, Clone, Copy, Eq, PartialEq, Hash, DebugPls)]
 pub struct Point(pub i64, pub i64);
 
 #[derive(Debug, Clone, Copy, Eq, PartialEq)]
@@ -16,6 +17,7 @@ impl_op_ex!(*|a: &Point, b: &i64| -> Point { Point(a.0 * b, a.1 * b) });
 impl_op_ex!(*|a: &Dir, b: &i64| -> Dir { Dir(a.0 * b, a.1 * b) });
 impl_op_ex!(-|a: &Point, b: &Point| -> Dir { Dir(a.0 - b.0, a.1 - b.1) });
 impl_op_ex!(-|a: &Dir| -> Dir { Dir(-a.0, -a.1) });
+impl_op_ex!(*|a: &Point, b: &Dir| -> i64 { a.0 * b.0 + a.1 * b.1 });
 
 impl Dir {
     pub fn norm(&self) -> Dir {

@@ -54,8 +54,10 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 name = "common"
 version = "0.1.0"
 dependencies = [
+ "dbg-pls",
  "impl_ops",
  "itertools",
+ "num",
 ]
 
 [[package]]
@@ -141,6 +143,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "day14"
+version = "0.1.0"
+dependencies = [
+ "common",
+ "dbg-pls",
+ "itertools",
+ "terny",
+]
+
+[[package]]
 name = "day2"
 version = "0.1.0"
 dependencies = [
@@ -210,6 +222,7 @@ version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "50b64a30092479907f5cc9506b79625f8ed4b73d1380a66f3a102804baa96a4a"
 dependencies = [
+ "dbg-pls-derive",
  "itoa",
  "prettyplease",
  "proc-macro2",
@@ -219,6 +232,17 @@ dependencies = [
  "syn",
  "syntect",
  "textwrap",
+]
+
+[[package]]
+name = "dbg-pls-derive"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "adfbcca6067d039b0079333826bfa6574a98ea6a068440c51cec69b99b03b4bf"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -669,6 +693,12 @@ dependencies = [
  "walkdir",
  "yaml-rust",
 ]
+
+[[package]]
+name = "terny"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cea18c7eb8944102ab0973817e4aa5f558fe9679b96b843600c0d365c7d115de"
 
 [[package]]
 name = "textwrap"
