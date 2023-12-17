@@ -153,6 +153,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "day15"
+version = "0.1.0"
+dependencies = [
+ "common",
+ "dbg-pls",
+ "itertools",
+ "terny",
+]
+
+[[package]]
 name = "day2"
 version = "0.1.0"
 dependencies = [
